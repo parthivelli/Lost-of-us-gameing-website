@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto+Slab:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pridi:wght@200;300;400;500;600;700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background-intro{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/page2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(2px);
+    opacity: 1;
+}
+.intro-sildeimg{
+    width: 1000px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   display: flex;
+   transform: translate(-50%,-50%);
+    overflow: hidden;
+}
+.silde-img{
+    height: 500px;
+    width: 1000px;
+    border-radius: 10px;
+    animation: slide 16s infinite;
+    transition-timing-function:linear;
+    opacity: 0.8;
+}
+.intro-button{
+    position: absolute;
+    top: 80%;
+    left: 43%;
+}
+button{
+    width: 130px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(112, 167, 248);
+    border: none;
+    outline: none;
+    font-family: "Poppins", serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 5px 0px 20px rgb(65, 108, 173,1.0) ;
+    color: rgb(0, 0, 0);
+    transition: all 0.4s ease;
+}
+button:active{
+    transform: scale(0.9);
+    box-shadow: 5px 0px 20px rgb(65, 108, 173,1.0);
+    background-color: rgb(59, 105, 175);;
+}
+.title-card{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    z-index: 1;
+}
+.title-card img{
+    width: 800px;
+    height: 400px;
+}
+.ps4img{
+    position: absolute;
+    top:2%;
+    left: 75%;
+    z-index: 1;
+    color: white;
+}
+.ps4{
+    width: 150px;
+    height:150px;
+}
+
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    55%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-200%);
+    }
+    80%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+
+} 
+
+@keyframes transitionID {
+    from{
+        opacity: 0;
+        transform: scale(0%);
+     }
+
+    to {
+        opacity: 1;
+        transform: scale(100%);
+
+    }
+}
+
+.background-intro{
+    animation: transitionID 2s ;
+    transition-timing-function: ease-in-out;
+    
+}
+
+
+/* @media screen and (min-width: 300px) and (max-width: 480px) {
+
+    .background-intro{
+        width: 700px;
+        height: 900px;
+    }
+    .intro-sildeimg{
+        width: 600px;
+        height: 700px;
+        position: absolute;
+        left:82%;
+        top: 85%;
+    }
+    .silde-img{
+        width: 700px;
+        height: 700px;
+    }
+    .title-card img{
+        width: 600px ;
+        height: 300px;
+        position: absolute;
+        top:100%;
+       left: -8%;
+
+    }
+    .ps4img{
+        position: absolute;
+        left: 115%;
+        top: 10%;
+   }
+   button{
+        width: 180px;
+        height: 60px;
+       font-size: 25px;
+      
+   }
+   .intro-button{
+    position: absolute;
+    left: 40%;
+
+   }
+} */
+
+
+@media screen and (min-width: 300px) and (max-width: 480px) {
+
+    .background-intro{
+        width: 200%;
+        height: 200%;
+        display: block;
+    }
+    .intro-sildeimg{
+        width: 180%;
+        height: 180%;
+        position: absolute;
+        top: 100%;
+         left: 100%; 
+   }
+    .silde-img{
+        width: 100%;
+        height: 100%;
+    }
+    .title-card{
+        position: absolute;
+        top: 75%;
+        left: 5%;
+    }
+    .intro-button{
+        position: absolute;
+        left: 35%;
+    }
+    .intro-button button{
+        width: 220px;
+        height: 80px;
+        font-size: 30px;
+    }
+ 
+
+}
+
+
+    
+
