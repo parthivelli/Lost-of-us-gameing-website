@@ -1,0 +1,173 @@
+ /* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background */
+.background-intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/page2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(2px);
+    z-index: -1;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Title Card */
+.title-card {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 50%; /* Adjusts size */
+    text-align: center;
+}
+
+.title-card img {
+    width: 100%;
+    max-width: 800px; /* Max limit */
+    height: auto;
+    display: block;
+}
+
+/* PS4 Image */
+.ps4img {
+    position: absolute;
+    top: 2%;
+    left: 75%;
+    transform: translateX(-50%);
+}
+
+.ps4 {
+    width: 120px;
+    height: 120px;
+}
+
+/* Slideshow */
+.intro-slideimg {
+    width: 1000px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    overflow: hidden;
+}
+
+.slide-img {
+    height: 500px;
+    width: 1000px;
+    border-radius: 10px;
+    animation: slide 16s infinite linear;
+    opacity: 0.8;
+}
+
+/* Button */
+.intro-button {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+button {
+    width: 130px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(112, 167, 248);
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 5px 0px 20px rgba(65, 108, 173, 1);
+    color: rgb(0, 0, 0);
+    transition: all 0.4s ease;
+}
+
+button:active {
+    transform: scale(0.9);
+    background-color: rgb(59, 105, 175);
+}
+
+/* Slideshow Animation */
+@keyframes slide {
+    0%, 25% { transform: translateX(0); }
+    30%, 50% { transform: translateX(-100%); }
+    55%, 75% { transform: translateX(-200%); }
+    80%, 100% { transform: translateX(-300%); }
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0%);
+    }
+    to {
+        opacity: 1;
+        transform: scale(100%);
+    }
+}
+
+/* ----------- MEDIA QUERY: Small Screens (300px - 780px) ----------- */
+@media screen and (min-width: 300px) and (max-width: 780px) {
+    .background-intro {
+        background-size: cover;
+        filter: blur(1px);
+    }
+
+    .title-card {
+        top: 40%;
+        width: 70%;
+    }
+
+    .title-card img {
+        max-width: 250px; /* Smaller for mobile */
+    }
+
+    .ps4img {
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .ps4 {
+        width: 100px;
+        height: 100px;
+    }
+
+    .intro-slideimg {
+        width: 90%;
+        height: 300px;
+        top: 45%;
+    }
+
+    .slide-img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .intro-button {
+        top: 75%;
+    }
+
+    button {
+        width: 130px;
+        font-size: 14px;
+    }
+}

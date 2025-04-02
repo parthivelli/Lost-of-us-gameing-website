@@ -1,0 +1,925 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto+Slab:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pridi:wght@200;300;400;500;600;700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    overflow: auto;
+}
+body::-webkit-scrollbar{
+    overflow: hidden;
+}
+.cast-backgroudimg{
+    background-image: url(./castimages/page6.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(1px);
+    z-index: -1;
+    object-fit: cover;
+}
+.castheadline-container{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.cast-heading{
+    width: 30%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+   font-size: x-large;
+   font-family: "Phudu", serif;
+   /* color: rgb(20, 95, 114); */
+   /* color:  rgb(112, 167, 248); */
+   color: gold;
+   /* text-shadow: 0px 2px 5px rgb(238, 238, 238); */
+   text-shadow: 2px 0px 5px rgb(220, 231, 247) ;
+}
+.cast-headingname{
+    color: white;
+}
+.cast-headingname1{
+    margin-left: 15px;
+}
+.castarrow-line1{
+    width: 10%;
+    height: 5px;
+    background-color:white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px white;
+}
+.castleft-arrow{
+    color:black;
+    font-size: xx-large;
+    text-shadow: 0px 0px 5px white;
+}
+.castarrow-line2{
+    width: 10%;
+    height: 5px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px white;
+}
+.castright-arrow{
+    color: black;
+    font-size: xx-large;
+    text-shadow: 0px 0px 5px white;
+}
+
+
+/* ------------------------------------------------------------------------ */
+
+.silder-container{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.silderimages-container{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+.silde-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px 0 50px;
+}
+img{
+    height: 300px;
+    position: relative;
+    width: 200px;
+    border-radius: 10px;
+    transition: 0.7s;
+    /* border: 1px solid rgb(253, 247, 247); */
+    box-shadow: 10px 10px 10px;
+    
+}
+.button{
+    position:absolute;
+    width: 300px;
+    height: 400px;
+    transition: 0.7s;
+    border-radius: 10px;
+}
+.button:hover{
+    background-color:none;
+}
+
+
+/* ---------------------------------------------------- */
+
+#silder1:target ~ .silderimages-container #img1,
+#silder1:target ~ .silderimages-container #button1{
+    width: 300px;
+    height: 400px;
+    
+}
+#silder2:target ~ .silderimages-container #img2,
+#silder2:target ~ .silderimages-container #button2{
+    width: 300px;
+    height: 400px;
+
+}
+#silder3:target ~ .silderimages-container #img3,
+#silder3:target ~ .silderimages-container #button3{
+    width: 300px;
+    height: 400px;
+
+}
+#silder4:target ~ .silderimages-container #img4,
+#silder4:target ~ .silderimages-container #button4{
+    width: 300px;
+    height: 400px;
+
+}
+#silder5:target ~ .silderimages-container #img5,
+#silder5:target ~ .silderimages-container #button5{
+    width: 300px;
+    height: 400px;
+
+}
+#silder6:target ~ .silderimages-container #img6,
+#silder6:target ~ .silderimages-container #button6{
+    width: 300px;
+    height: 400px;
+
+}
+#silder7:target ~ .silderimages-container #img7,
+#silder7:target ~ .silderimages-container #button7{
+    width: 300px;
+    height: 400px;
+}
+#silder8:target ~ .silderimages-container #img8,
+#silder8:target ~ .silderimages-container #button8{
+    width: 300px;
+    height: 400px;
+
+}
+#silder9:target ~ .silderimages-container #img9,
+#silder9:target ~ .silderimages-container #button9{
+    width: 300px;
+    height: 400px;
+
+}
+#silder10:target ~ .silderimages-container #img10,
+#silder10:target ~ .silderimages-container #button10{
+    width: 300px;
+    height: 400px;
+
+}
+#silder11:target ~ .silderimages-container #img11,
+#silder11:target ~ .silderimages-container #button11{
+    width: 300px;
+    height: 400px;
+
+}
+#silder1:target ~ .silderimages-container{
+    left: 100%;
+}
+#silder2:target ~ .silderimages-container{
+    left: 80%;
+}
+#silder3:target ~ .silderimages-container{
+    left: 60%;
+}
+#silder4:target ~ .silderimages-container{
+    left: 40%;
+}
+#silder5:target ~ .silderimages-container{
+    left: 20%;
+}
+#silder6:target ~ .silderimages-container{
+    left: 0%;
+}
+#silder7:target ~ .silderimages-container{
+    left: -20%;
+}
+#silder8:target ~ .silderimages-container{
+    left: -40%;
+}
+#silder9:target ~ .silderimages-container{
+    left: -60%;
+}
+#silder10:target ~ .silderimages-container{
+    left: -80%;
+}
+#silder11:target ~ .silderimages-container{
+    left: -100%;
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+
+.para1,.para2,.para3,.para4,.para5,
+.para6,.para7,.para8,.para9,.para10,.para11{  
+    position: absolute;
+    top: 10%;
+    color: black; 
+    /* color: gold; */
+    font-size:25px;
+    font-weight: 600;
+    margin-left: 10px;
+    font-family: "Poppins", serif;
+    opacity: 0.9;
+    text-shadow: 2px 0px 13px rgb(255, 255, 255);
+}
+.head-tommy{
+    font-family: "Pridi", serif;
+    font-size: xx-large;
+    padding: 5px 10px 5px;
+
+}
+.content-tommy{
+     padding: 10px;
+     text-align: justify;
+     font-family: "Poppins", serif;
+     font-size: 13px;
+     color: goldenrod;
+}
+.hover-tommy{
+  position: absolute;
+  bottom: 0;
+  /* left: -40%; */
+  top: 20%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  width: 410px;
+  height: 320px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 10px;
+
+
+}
+.silde-div:hover .hover-tommy {
+    opacity: 1;
+    transition: 0.5s;
+    transition-duration: 2s;
+  }
+
+/* ----------------------------------------------------------------------------------------------------------- */
+
+.head-rellie{
+    font-family: "Pridi", serif;
+    font-size: xx-large;
+    padding: 5px 10px 5px;
+
+}
+.content-rellie{
+     padding: 10px;
+     text-align: justify;
+     font-family: "Poppins", serif;
+     font-size: 13px;
+     color: goldenrod;
+}
+.hover-rellie{
+  position: absolute;
+  bottom: 0;
+  /* left: -20%; */
+  top: 20%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  width: 410px;
+  height: 320px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.silde-div:hover .hover-rellie {
+    opacity: 1;
+    transition: 0.5s;
+    transition-duration: 2s;
+}
+/* ----------------------------------------------------- */
+.head-merlene{
+    font-family: "Pridi", serif;
+    font-size: xx-large;
+    padding: 5px 10px 5px;
+
+}
+.content-merlene{
+     padding: 10px;
+     text-align: justify;
+     font-family: "Poppins", serif;
+     font-size: 13px;
+     color: goldenrod;
+}
+.hover-merlene{
+  position: absolute;
+  bottom: 0;
+  left: -10%;
+  top: 20%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  width: 410px;
+  height: 320px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.silde-div:hover .hover-merlene {
+    opacity: 1;
+    transition: 0.5s;
+    transition-duration: 2s;
+}
+/* ------------------------------------------------------------- */
+
+.head-tees{
+    font-family: "Pridi", serif;
+    font-size: xx-large;
+    padding: 5px 10px 5px;
+
+}
+.content-tees{
+     padding: 10px;
+     text-align: justify;
+     font-family: "Poppins", serif;
+     font-size: 13px;
+     color: goldenrod;
+}
+.hover-tees{
+  position: absolute;
+  bottom: 0;
+  /* left: -5px; */
+  top: 20%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  width: 410px;
+  height: 320px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.silde-div:hover .hover-tees {
+    opacity: 0.9;
+    transition: 0.5s;
+    transition-duration: 2s;
+}
+/* -------------------------------------------------------------------------------- */
+.head-bill{
+    font-family: "Pridi", serif;
+    font-size: xx-large;
+    padding: 5px 10px 5px;
+
+}
+.content-bill{
+     padding: 10px;
+     text-align: justify;
+     font-family: "Poppins", serif;
+     font-size: 13px;
+     color: goldenrod;
+}
+.hover-bill{
+  position: absolute;
+  bottom: 0;
+  /* left: 9%; */
+  top: 20%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  width: 410px;
+  height: 320px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.silde-div:hover .hover-bill {
+    opacity: 0.9;
+    transition: 0.5s;
+    transition-duration: 2s;
+}
+/* ------------------------------------------------------------------- */
+.head-henry{
+    font-family: "Pridi", serif;
+    font-size: xx-large;
+    padding: 5px 10px 5px;
+
+}
+.content-henry{
+     padding: 10px;
+     text-align: justify;
+     font-family: "Poppins", serif;
+     font-size: 13px;
+     color: goldenrod;
+}
+.hover-henry{
+  position: absolute;
+  bottom: 0;
+  /* left: 26%; */
+  top: 20%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  width: 410px;
+  height: 320px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.silde-div:hover .hover-henry {
+    opacity: 0.9;
+    transition: 0.5s;
+    transition-duration: 2s;
+}
+/* ----------------------------------- */
+.head-sam{
+    font-family: "Pridi", serif;
+    font-size: xx-large;
+    padding: 5px 10px 5px;
+
+}
+.content-sam{
+     padding: 10px;
+     text-align: justify;
+     font-family: "Poppins", serif;
+     font-size: 13px;
+     color: goldenrod;
+}
+.hover-sam{
+  position: absolute;
+  bottom: 0;
+  /* left: 42%; */
+  top: 20%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  width: 410px;
+  height: 320px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.silde-div:hover .hover-sam {
+    opacity: 0.9;
+    transition: 0.5s;
+    transition-duration: 2s;
+}
+/* ------------------------------------------------------------------------------- */
+.head-devid{
+    font-family: "Pridi", serif;
+    font-size: xx-large;
+    padding: 5px 10px 5px;
+
+}
+.content-devid{
+     padding: 10px;
+     text-align: justify;
+     font-family: "Poppins", serif;
+     font-size: 13px;
+     color: goldenrod;
+}
+.hover-devid{
+  position: absolute;
+  bottom: 0;
+  /* left: 58%; */
+  top: 20%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  width: 410px;
+  height: 320px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.silde-div:hover .hover-devid {
+    opacity: 0.9;
+    transition: 0.5s;
+    transition-duration: 2s;
+}
+/* -------------------------------------------------------------------- */
+.head-joel{
+    font-family: "Pridi", serif;
+    font-size: xx-large;
+    padding: 5px 10px 5px;
+
+}
+.content-joel{
+     padding: 10px;
+     text-align: justify;
+     font-family: "Poppins", serif;
+     font-size: 13px;
+     color: goldenrod;
+}
+.hover-joel{
+  position: absolute;
+  bottom: 0;
+  /* left: 82%; */
+  top: 20%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  width: 410px;
+  height: 320px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.silde-div:hover .hover-joel {
+    opacity: 0.9;
+    transition: 0.5s;
+    transition-duration: 2s;
+}
+/* -----------------------------------------------------------------------------*/
+.head-ellie{
+    font-family: "Pridi", serif;
+    font-size: xx-large;
+    padding: 5px 10px 5px;
+
+}
+.content-ellie{
+     padding: 10px;
+     text-align: justify;
+     font-family: "Poppins", serif;
+     font-size: 13px;
+     color: goldenrod;
+}
+.hover-ellie{
+  position: absolute;
+  bottom: 0;
+  /* left: 97%; */
+  top: 20%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  width: 410px;
+  height: 320px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.silde-div:hover .hover-ellie {
+    opacity: 0.9;
+    transition: 0.5s;
+    transition-duration: 2s;
+}
+/* --------------------------------------------------------------------------------------------------- */
+.head-abby{
+    font-family: "Pridi", serif;
+    font-size: xx-large;
+    padding: 5px 10px 5px;
+
+}
+.content-abby{
+     padding: 10px;
+     text-align: justify;
+     font-family: "Poppins", serif;
+     font-size: 13px;
+     color: goldenrod;
+}
+.hover-abby{
+  position: absolute;
+  bottom: 0;
+  /* left: 150%; */
+  top: 20%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  width: 410px;
+  height: 320px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.silde-div:hover .hover-abby {
+    opacity: 0.9;
+    transition: 0.5s;
+    transition-duration: 2s;
+}
+/* ------------------------------------------------------------------------------ */
+
+.backoption{
+    position: absolute;
+    left: 90px;   
+}
+.backoption a{
+    /* color: rgba(0, 0, 0, 0.897); */
+    color: white;
+    text-decoration: none;
+    font-family: "Phudu", serif;
+    font-size: xx-large;
+    /* text-shadow: 0px 0px 8px rgb(255, 255, 255); */
+}
+.backoption a:hover{
+    color:  rgb(112, 167, 248);
+}
+.nextoption{
+    position: absolute;
+    right: 90px;
+}
+.nextoption a{
+    /* color: rgba(0, 0, 0, 0.897); */
+    color: white;
+    text-decoration: none;
+    font-family: "Phudu", serif;
+    font-size: xx-large;
+    /* text-shadow: 0px 0px 8px rgb(255, 255, 255); */
+}
+.nextoption a:hover{
+    color:  rgb(112, 167, 248);
+}
+
+/* --------------------------------------------------------------------------------------------- */
+@keyframes transitioncast {
+    from{
+        opacity: 0;
+        transform: scaleX(0%);
+        /* transform: scale(0); */
+     }
+
+    to {
+        opacity: 1;
+        transform: scaleX(100%);
+        /* transform: scale(1); */
+
+    }
+}
+
+.silder-container{
+    animation: transitioncast 2s;
+}
+
+
+@media screen and (min-width: 300px) and (max-width: 780px) {
+   
+.cast-backgroudimg{
+    background-image: none;
+    background-color: rgba(19, 18, 18, 0.87);
+    width: 100%;
+    height:600px;
+    
+}
+.silderimages-container{
+    flex-direction: column;
+    display: grid;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    width: 90%;
+    height:90%;
+    gap: 5px;
+    cursor: pointer;
+}
+ .silderimages-container:hover{
+   transition: ease-in-out;
+   
+} 
+img{
+width:250px;
+height:250px;
+box-shadow: none;
+display: flex;
+border: 5px solid black;
+}
+#silder1:target ~ .silderimages-container #img1,
+#silder1:target ~ .silderimages-container #button1{
+   width: 250px;
+   height: 250px; 
+}
+#silder2:target ~ .silderimages-container #img2,
+#silder2:target ~ .silderimages-container #button2{
+    width: 250px;
+    height: 250px;
+
+}
+#silder3:target ~ .silderimages-container #img3,
+#silder3:target ~ .silderimages-container #button3{
+    width: 250px;
+    height: 250px;
+
+}
+#silder4:target ~ .silderimages-container #img4,
+#silder4:target ~ .silderimages-container #button4{
+    width: 250px;
+    height: 250px;
+
+}
+#silder5:target ~ .silderimages-container #img5,
+#silder5:target ~ .silderimages-container #button5{
+    width: 250px;
+    height: 250px;
+
+}
+#silder6:target ~ .silderimages-container #img6,
+#silder6:target ~ .silderimages-container #button6{
+    width: 250px;
+    height: 250px;
+
+}
+#silder7:target ~ .silderimages-container #img7,
+#silder7:target ~ .silderimages-container #button7{
+    width: 250px;
+    height: 250px;
+}
+#silder8:target ~ .silderimages-container #img8,
+#silder8:target ~ .silderimages-container #button8{
+    width: 250px;
+    height: 250px;
+
+}
+#silder9:target ~ .silderimages-container #img9,
+#silder9:target ~ .silderimages-container #button9{
+    width: 250px;
+    height: 250px;
+}
+#silder10:target ~ .silderimages-container #img10,
+#silder10:target ~ .silderimages-container #button10{
+    width: 250px;
+    height: 250px;
+}
+#silder11:target ~ .silderimages-container #img11,
+#silder11:target ~ .silderimages-container #button11{
+    width: 250px;
+    height: 250px;
+
+}
+#silder1:target ~ .silderimages-container{
+    left: 0;
+}
+#silder2:target ~ .silderimages-container{
+    left:0
+}
+#silder3:target ~ .silderimages-container{
+    left: 0
+}
+#silder4:target ~ .silderimages-container{
+    left: 0
+}
+#silder5:target ~ .silderimages-container{
+    left: 0
+}
+#silder6:target ~ .silderimages-container{
+    left:0
+}
+#silder7:target ~ .silderimages-container{
+    left: 0
+}
+#silder8:target ~ .silderimages-container{
+    left: 0;
+}
+#silder9:target ~ .silderimages-container{
+    left: 0;
+}
+#silder10:target ~ .silderimages-container{
+    left:0;
+}
+#silder11:target ~ .silderimages-container{
+    left:0;
+}
+.button:hover{
+    display: none;
+}
+.para1{
+    position: absolute;
+    top: 1%;
+    font-size: 15px;
+    color: gold;
+}
+.para2{
+    position: absolute;
+    top: 55%;
+    font-size: 15px;
+    color: gold;
+}
+.para3{
+    position: absolute;
+    top: 110%;
+     font-size: 15px;
+     color: gold;
+}
+.para4{
+    position: absolute;
+    top: 165%;
+    font-size: 15px;
+    color: gold;
+}
+.para5{
+    position: absolute;
+    top: 220%;
+    font-size: 15px;
+    color: gold;
+}
+.para6{
+    position: absolute;
+    top: 274%;
+    font-size: 15px;
+    color: gold;
+}
+.para7{
+    position: absolute;
+    top:328%;
+    font-size: 15px;
+    color: gold;
+}
+.para8{
+    position: absolute;
+    top:382%;
+    font-size: 15px;
+    color: gold;
+}
+.para9{
+    position: absolute;
+    top: 437%;
+    font-size: 15px;
+    color: gold;
+}
+.para10{
+    position: absolute;
+    top: 492%;
+    font-size: 15px;
+    color: gold;
+}
+.para11{
+    position: absolute;
+    top: 547%;
+    font-size: 15px;
+    color: gold;
+}
+.cast-headingname,.cast-headingname1{
+    font-size: 20px;
+}
+.castarrow-line1,.castarrow-line2{
+    display: none;
+}
+.fa-angles-left{
+    font-size: 25px;
+    position: absolute;
+    top: 3%;
+    left: 2%;
+}
+.fa-angles-right{
+    font-size: 25px;
+    position: absolute;
+    right: 2%;
+    top: 3%;
+}
+.backoption{
+    position: absolute;
+    left: 12%;
+    top: 2%;
+}
+.backoption a{
+    font-size: 20px;
+}
+h3:hover{
+    color:  rgb(112, 167, 248);
+}
+.nextoption{
+    position: absolute;
+    right: 12%;
+    top: 2%;
+}
+.nextoption a{
+    font-size: 20px;
+}
+.cast-heading{
+    position: absolute;
+    top: 8%;
+    height: 50px;
+    width: 100%;
+    gap: 15px;
+}
+.cast-headingname{
+    font-size: 28px;
+}
+.cast-headingname1{
+    font-size: 28px;
+}
+.hover-abby,.hover-bill,.hover-devid,.hover-ellie
+,.hover-henry,.hover-joel,.hover-merlene,.hover-rellie,
+.hover-sam,.hover-tees,.hover-tommy{
+    display: none;
+}
+
+}
